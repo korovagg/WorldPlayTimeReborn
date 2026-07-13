@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "worldplaytimereborn",
+	"version": "${version}",
+	"name": "World Play Time Reborn",
+	"description": "Displays the world's play time in the world selection menu.",
+	"authors": ["KoroWin", "Khajiitos"],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/world-play-time-reborn",
+		"sources": "https://github.com/korovagg/WorldPlayTimeReborn",
+		"issues": "https://github.com/korovagg/WorldPlayTimeReborn/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/worldplaytimereborn/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"win.korowin.worldplaytimereborn.client.WorldPlayTimeRebornClient"
+		],
+		"modmenu": [
+			"win.korowin.worldplaytimereborn.client.ModMenuApiImpl"
+		]
+	},
+	"mixins": [
+		"worldplaytimereborn.mixins.json"
+	],
+	"depends": {
+		"java": ">=25",
+		"minecraft": "~26.1.2",
+		"fabricloader": ">=0.19.3",
+		"fabric-api": "*"
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "win.korowin.worldplaytimereborn.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "LevelStorageSourceMixin",
+    "LevelSummaryMixin",
+    "OnlineServerEntryMixin",
+    "WorldListEntryMixin"
+  ],
+  "mixins": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
