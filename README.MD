@@ -11,7 +11,8 @@ World Play Time Reborn is a **Fabric** and **NeoForge** mod for Minecraft 1.21.1
 
 ---
 <center>
-  
+
+[![Support my mods on Ko-fi!](https://i.ibb.co/kg627r0J/ko-fi.png)](https://ko-fi.com/korovagg)
 [![CurseForge](https://i.ibb.co/57rNyyy/image.png)](https://www.curseforge.com/minecraft/mc-mods/world-play-time-reborn) [![Modrinth](https://i.ibb.co/TqwWmF06/1.png)](https://modrinth.com/mod/world-play-time-reborn)
 
 </center>
