@@ -9,6 +9,8 @@ import win.korowin.worldplaytimereborn.util.IWithPlayTime;
 public class LevelSummaryMixin implements IWithPlayTime {
 	@Unique
 	private int worldplaytimereborn$playTimeTicks = -1;
+	@Unique
+	private long worldplaytimereborn$worldSizeBytes = -1;
 
 	/**
 	 * Stores playtime ticks on the level summary for later rendering.
@@ -24,5 +26,15 @@ public class LevelSummaryMixin implements IWithPlayTime {
 	@Override
 	public int getPlayTimeTicks() {
 		return this.worldplaytimereborn$playTimeTicks;
+	}
+
+	@Override
+	public void setWorldSizeBytes(long worldSizeBytes) {
+		this.worldplaytimereborn$worldSizeBytes = worldSizeBytes;
+	}
+
+	@Override
+	public long getWorldSizeBytes() {
+		return this.worldplaytimereborn$worldSizeBytes;
 	}
 }

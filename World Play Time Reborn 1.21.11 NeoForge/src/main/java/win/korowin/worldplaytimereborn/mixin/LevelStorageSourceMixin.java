@@ -11,12 +11,17 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import win.korowin.worldplaytimereborn.config.WptConfig;
 import win.korowin.worldplaytimereborn.util.IWithPlayTime;
 
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.SimpleFileVisitor;
+import java.nio.file.attribute.BasicFileAttributes;
 
 @Mixin(LevelStorageSource.class)
 public class LevelStorageSourceMixin {
@@ -25,6 +30,26 @@ public class LevelStorageSourceMixin {
         LevelSummary levelSummary = cir.getReturnValue();
 
         if (levelSummary instanceof IWithPlayTime withPlayTime) {
+            if (WptConfig.showWorldSize.get() && Files.isDirectory(levelDirectory.path())) {
+                long[] worldSize = {0};
+                try {
+                    Files.walkFileTree(levelDirectory.path(), new SimpleFileVisitor<>() {
+                        @Override
+                        public FileVisitResult visitFile(Path file, BasicFileAttributes attributes) {
+                            worldSize[0] += attributes.size();
+                            return FileVisitResult.CONTINUE;
+                        }
+
+                        @Override
+                        public FileVisitResult visitFileFailed(Path file, IOException exception) {
+                            return FileVisitResult.CONTINUE;
+                        }
+                    });
+                    withPlayTime.setWorldSizeBytes(worldSize[0]);
+                } catch (IOException ignored) {
+                }
+            }
+
             Path stats = levelDirectory.resourcePath(LevelResource.PLAYER_STATS_DIR);
             File statsFile = stats.toFile();
 

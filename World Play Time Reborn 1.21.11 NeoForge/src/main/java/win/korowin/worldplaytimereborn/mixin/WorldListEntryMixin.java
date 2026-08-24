@@ -21,14 +21,17 @@ public class WorldListEntryMixin {
 
     @Inject(at = @At("TAIL"), method = "renderContent")
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, boolean pHovering, float pPartialTick, CallbackInfo ci) {
-        if (!WptConfig.showWorldPlayTime.get()) {
+        if (!WptConfig.showWorldPlayTime.get() && !WptConfig.showWorldSize.get()) {
             return;
         }
 
         if (this.summary instanceof IWithPlayTime withPlayTime) {
             WorldSelectionList.WorldListEntry entry = (WorldSelectionList.WorldListEntry) (Object) this;
-            int ticks = withPlayTime.getPlayTimeTicks();
-            int indicatorWidth = PlayTimeRenderer.getWholeWidth(ticks);
+            int ticks = WptConfig.showWorldPlayTime.get() ? withPlayTime.getPlayTimeTicks() : -1;
+            long bytes = WptConfig.showWorldSize.get() ? withPlayTime.getWorldSizeBytes() : -1;
+            int playTimeWidth = PlayTimeRenderer.getWholeWidth(ticks);
+            int worldSizeWidth = PlayTimeRenderer.getWorldSizeWidth(bytes);
+            int indicatorWidth = Math.max(playTimeWidth, worldSizeWidth);
 
             if (indicatorWidth != 0) {
                 int renderX;
@@ -52,7 +55,12 @@ public class WorldListEntryMixin {
                     }
                 }
 
-                PlayTimeRenderer.render(guiGraphics, renderX, renderY, ticks, WptConfig.worldPlayTimeColor.get());
+                if (playTimeWidth != 0) {
+                    PlayTimeRenderer.render(guiGraphics, renderX + indicatorWidth - playTimeWidth, renderY, ticks, WptConfig.worldPlayTimeColor.get());
+                }
+                if (worldSizeWidth != 0) {
+                    PlayTimeRenderer.renderWorldSize(guiGraphics, renderX + indicatorWidth - worldSizeWidth, renderY + (playTimeWidth == 0 ? 0 : 10), bytes, WptConfig.worldPlayTimeColor.get());
+                }
             }
         }
     }

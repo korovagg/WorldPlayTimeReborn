@@ -13,6 +13,7 @@
   "worldplaytimereborn.config.serverPlayTimePosition.right": "Справа",
   "worldplaytimereborn.config.serverPlayTimeColor": "Цвет времени игры на сервере",
 
+  "worldplaytimereborn.config.showWorldSize": "Показывать размер мира",
   "worldplaytimereborn.config.showWorldPlayTime": "Показывать время игры в мире",
   "worldplaytimereborn.config.worldPlayTimePosition": "Позиция времени игры в мире",
   "worldplaytimereborn.config.worldPlayTimePosition.top_right": "Сверху справа",

@@ -38,6 +38,11 @@ public class ClothConfigScreenMaker {
 				.setSaveConsumer(WptConfig.showWorldPlayTime::set)
 				.build());
 
+		worldEntryCategory.addEntry(entryBuilder.startBooleanToggle(Component.translatable("worldplaytimereborn.config.showWorldSize"), WptConfig.showWorldSize.get())
+			.setDefaultValue(WptConfig.showWorldSize::getDefault)
+			.setSaveConsumer(WptConfig.showWorldSize::set)
+			.build());
+
 		worldEntryCategory.addEntry(entryBuilder.startEnumSelector(Component.translatable("worldplaytimereborn.config.worldPlayTimePosition"), WorldEntryRenderPos.class, WptConfig.worldPlayTimePosition.get())
 				.setDefaultValue(WptConfig.worldPlayTimePosition::getDefault)
 				.setSaveConsumer(WptConfig.worldPlayTimePosition::set)

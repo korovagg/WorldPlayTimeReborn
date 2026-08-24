@@ -13,6 +13,7 @@
   "worldplaytimereborn.config.serverPlayTimePosition.right": "Sağ",
   "worldplaytimereborn.config.serverPlayTimeColor": "Sunucu Oynama Süresi Rengi",
 
+  "worldplaytimereborn.config.showWorldSize": "Dünya Boyutunu Göster",
   "worldplaytimereborn.config.showWorldPlayTime": "Dünya Oynama Süresini Göster",
   "worldplaytimereborn.config.worldPlayTimePosition": "Dünya Oynama Süresi Pozisyonu",
   "worldplaytimereborn.config.worldPlayTimePosition.top_right": "Sağ Üst",

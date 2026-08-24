@@ -10,4 +10,8 @@ public interface IWithPlayTime {
 	 * Gets the cached playtime in ticks.
 	 */
 	int getPlayTimeTicks();
+
+	void setWorldSizeBytes(long worldSizeBytes);
+
+	long getWorldSizeBytes();
 }
