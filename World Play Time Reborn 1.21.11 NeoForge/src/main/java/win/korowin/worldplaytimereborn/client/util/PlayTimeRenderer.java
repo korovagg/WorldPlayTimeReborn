@@ -38,6 +38,29 @@ public class PlayTimeRenderer {
         return minecraft.font.width(component) + 11;
     }
 
+    public static @Nullable Component getWorldSizeComponent(long bytes) {
+        if (bytes < 0) {
+            return null;
+        }
+
+        String[] units = {"B", "KB", "MB", "GB", "TB"};
+        double size = bytes;
+        int unit = 0;
+
+        while (size >= 1024.0 && unit < units.length - 1) {
+            size /= 1024.0;
+            unit++;
+        }
+
+        return Component.literal(unit == 0 ? bytes + " B" : String.format(Locale.US, "%.1f %s", size, units[unit]));
+    }
+
+    public static int getWorldSizeWidth(long bytes) {
+        Component component = getWorldSizeComponent(bytes);
+        return component == null ? 0 : Minecraft.getInstance().font.width(component);
+    }
+
+
     public static void render(GuiGraphics guiGraphics, int x, int y, int playTimeTicks, Color color) {
         Minecraft minecraft = Minecraft.getInstance();
         Component component = getPlayTimeComponent(playTimeTicks);
@@ -48,5 +71,12 @@ public class PlayTimeRenderer {
 
         guiGraphics.blit(RenderPipelines.GUI_TEXTURED, TIME_ICON, x, y, 0.f, 0.f, 9, 9, 9, 9, color.toARGB());
         guiGraphics.drawString(minecraft.font, component, x + 11, y + 1, color.toARGB(), false);
+    }
+
+    public static void renderWorldSize(GuiGraphics guiGraphics, int x, int y, long bytes, Color color) {
+        Component component = getWorldSizeComponent(bytes);
+        if (component != null) {
+            guiGraphics.drawString(Minecraft.getInstance().font, component, x, y + 1, color.toARGB(), false);
+        }
     }
 }

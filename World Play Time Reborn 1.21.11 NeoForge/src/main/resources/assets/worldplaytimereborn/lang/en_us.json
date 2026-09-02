@@ -13,6 +13,7 @@
   "worldplaytimereborn.config.serverPlayTimeColor": "Server Play Time Color",
   "worldplaytimereborn.config.showWorldPlayTime": "Show World Play Time",
   "worldplaytimereborn.config.worldPlayTimeCountAllPlayers": "Count Play Time Of All Players",
+  "worldplaytimereborn.config.showWorldSize": "Show World Size",
   "worldplaytimereborn.config.worldPlayTimePosition": "World Play Time Position",
   "worldplaytimereborn.config.worldPlayTimePosition.top_right": "Top Right",
   "worldplaytimereborn.config.worldPlayTimePosition.left": "Left",
