@@ -4,7 +4,6 @@
   "worldplaytimereborn.config.category.general": "Общие",
   "worldplaytimereborn.config.category.world_entry": "Запись мира",
   "worldplaytimereborn.config.category.server_entry": "Запись сервера",
-
   "worldplaytimereborn.config.showServerPlayTime": "Показывать время игры на сервере",
   "worldplaytimereborn.config.serverPlayTimePosition": "Позиция времени игры на сервере",
   "worldplaytimereborn.config.serverPlayTimePosition.after_name": "После названия",
@@ -12,8 +11,8 @@
   "worldplaytimereborn.config.serverPlayTimePosition.left": "Слева",
   "worldplaytimereborn.config.serverPlayTimePosition.right": "Справа",
   "worldplaytimereborn.config.serverPlayTimeColor": "Цвет времени игры на сервере",
-
   "worldplaytimereborn.config.showWorldPlayTime": "Показывать время игры в мире",
+  "worldplaytimereborn.config.worldPlayTimeCountAllPlayers": "Учитывать время игры всех игроков",
   "worldplaytimereborn.config.worldPlayTimePosition": "Позиция времени игры в мире",
   "worldplaytimereborn.config.worldPlayTimePosition.top_right": "Сверху справа",
   "worldplaytimereborn.config.worldPlayTimePosition.left": "Слева",

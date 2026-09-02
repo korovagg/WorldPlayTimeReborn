@@ -34,6 +34,9 @@ public class WptConfig {
     public static final WptConfigValues.BooleanValue showWorldPlayTime = new WptConfigValues.BooleanValue(true);
 
     @Entry
+    public static final WptConfigValues.BooleanValue worldPlayTimeCountAllPlayers = new WptConfigValues.BooleanValue(false);
+
+    @Entry
     public static final WptConfigValues.EnumValue<WorldEntryRenderPos> worldPlayTimePosition = new WptConfigValues.EnumValue<>(WorldEntryRenderPos.TOP_RIGHT);
 
     @Entry

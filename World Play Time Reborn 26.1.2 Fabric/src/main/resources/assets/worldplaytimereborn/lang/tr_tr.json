@@ -4,7 +4,6 @@
   "worldplaytimereborn.config.category.general": "Genel",
   "worldplaytimereborn.config.category.world_entry": "Dünya Girişi",
   "worldplaytimereborn.config.category.server_entry": "Sunucu Girişi",
-
   "worldplaytimereborn.config.showServerPlayTime": "Sunucu Oynama Süresini Göster",
   "worldplaytimereborn.config.serverPlayTimePosition": "Sunucu Oynama Süresi Pozisyonu",
   "worldplaytimereborn.config.serverPlayTimePosition.after_name": "İsimden Sonra",
@@ -12,8 +11,8 @@
   "worldplaytimereborn.config.serverPlayTimePosition.left": "Sol",
   "worldplaytimereborn.config.serverPlayTimePosition.right": "Sağ",
   "worldplaytimereborn.config.serverPlayTimeColor": "Sunucu Oynama Süresi Rengi",
-
   "worldplaytimereborn.config.showWorldPlayTime": "Dünya Oynama Süresini Göster",
+  "worldplaytimereborn.config.worldPlayTimeCountAllPlayers": "Tüm Oyuncuların Oynama Süresini Say",
   "worldplaytimereborn.config.worldPlayTimePosition": "Dünya Oynama Süresi Pozisyonu",
   "worldplaytimereborn.config.worldPlayTimePosition.top_right": "Sağ Üst",
   "worldplaytimereborn.config.worldPlayTimePosition.left": "Sol",
