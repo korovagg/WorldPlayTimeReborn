@@ -48,6 +48,4 @@ MANIFEST
 **/*.launch
 **/.DS_Store
 
-# User-specific (ignore gradle.properties in all subfolders except wrapper)
-**/gradle.properties
-!**/gradle/wrapper/gradle-wrapper.properties
+# gradle.properties are tracked for every mod subproject
