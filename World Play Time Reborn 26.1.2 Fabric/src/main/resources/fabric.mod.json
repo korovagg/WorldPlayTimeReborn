@@ -3,7 +3,7 @@
 	"id": "worldplaytimereborn",
 	"version": "${version}",
 	"name": "World Play Time Reborn",
-	"description": "Displays the world's play time in the world selection menu.",
+	"description": "Displays the world's play time and world size in the world selection menu.",
 	"authors": ["KoroWin", "Khajiitos"],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/world-play-time-reborn",

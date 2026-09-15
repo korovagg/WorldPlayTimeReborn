@@ -1,0 +1,8 @@
+package win.korowin.worldplaytimereborn.util;
+
+public enum ServerEntryRenderPos {
+    AFTER_NAME,
+    BEHIND_COUNT,
+    LEFT,
+    RIGHT
+}

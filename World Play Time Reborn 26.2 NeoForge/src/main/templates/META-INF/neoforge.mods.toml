@@ -40,7 +40,7 @@ authors="KoroWin, Khajiitos"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Displays the world's play time in the world selection menu.
+Displays the world's play time and world size in the world selection menu.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
