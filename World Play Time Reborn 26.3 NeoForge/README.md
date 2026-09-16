@@ -17,8 +17,6 @@ Requires JDK 25.
 
 The built jar can be found in `build/libs/`.
 
-> Note: `neo_version` in `gradle.properties` is set to `26.3.0.0-beta` as a placeholder — NeoForge for Minecraft 26.3 has not been published yet. Update it to the actual version from https://projects.neoforged.net/neoforged/neoforge once released.
-
 ## License
 
 MIT
